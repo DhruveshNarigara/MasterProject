@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using MasterProject.Models;
 using MasterProject.Repositories;
 
-namespace SRS.Controllers
+namespace MasterProject.Controllers
 {
     public class EmployeeController : Controller
     {
