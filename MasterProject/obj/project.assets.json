@@ -436,24 +436,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/preyamehta/.nuget/packages/": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj",
+      "projectUniqueName": "D:\\MasterProject\\MasterProject\\MasterProject.csproj",
       "projectName": "MasterProject",
-      "projectPath": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj",
-      "packagesPath": "/Users/preyamehta/.nuget/packages/",
-      "outputPath": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/obj/",
+      "projectPath": "D:\\MasterProject\\MasterProject\\MasterProject.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\MasterProject\\MasterProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/preyamehta/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -496,7 +498,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.418/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

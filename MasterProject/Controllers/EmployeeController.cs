@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using MasterProject.Models;
 using MasterProject.Repositories;
+using Npgsql;
 
 namespace MasterProject.Controllers
 {
