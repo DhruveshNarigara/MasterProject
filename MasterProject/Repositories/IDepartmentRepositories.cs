@@ -10,7 +10,10 @@ namespace MasterProject.Repositories
 {
     public interface IDepartmentRepositories
     {
-        void AddDepartments(DepartmentModel dept);
+        DepartmentModel AddDepartments(DepartmentModel dept);
+
+        IEnumerable<DepartmentModel> GetAlldept();
+        
         public void UpdateDepartments(DepartmentModel department);
         public void DeleteDepartments(int deptId);
     }
