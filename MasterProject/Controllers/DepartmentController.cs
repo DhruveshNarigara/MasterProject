@@ -22,6 +22,10 @@ namespace MasterProject.Controllers
         {
             return View();
         }
+        public IActionResult AddDepartment()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

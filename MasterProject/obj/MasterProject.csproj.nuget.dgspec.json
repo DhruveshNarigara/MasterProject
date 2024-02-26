@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj": {}
+    "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj": {}
   },
   "projects": {
-    "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj": {
+    "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj",
+        "projectUniqueName": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj",
         "projectName": "MasterProject",
-        "projectPath": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj",
-        "packagesPath": "/Users/dhruveshnarigara/.nuget/packages/",
-        "outputPath": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/obj/",
+        "projectPath": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/MasterProject.csproj",
+        "packagesPath": "/Users/preyamehta/.nuget/packages/",
+        "outputPath": "/Users/preyamehta/Documents/preya-casepoint/MasterProject/MasterProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dhruveshnarigara/.nuget/NuGet/NuGet.Config"
+          "/Users/preyamehta/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
