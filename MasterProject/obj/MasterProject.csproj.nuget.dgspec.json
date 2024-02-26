@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {}
+    "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {}
   },
   "projects": {
-    "D:\\C#\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {
+    "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
+        "projectUniqueName": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
         "projectName": "MasterProject",
-        "projectPath": "D:\\C#\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
-        "packagesPath": "C:\\Users\\hinal\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\MasterProject\\MasterProject\\MasterProject\\obj\\",
+        "projectPath": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hinal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
