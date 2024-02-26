@@ -15,7 +15,7 @@ namespace MasterProject.Repositories
             
         }
 
-        public void UpdateEmployees(DepartmentModel department)
+        public void UpdateDepartments(DepartmentModel department)
         {
             conn.Open();
             using (var cmd = new NpgsqlCommand("UPDATE t_deptmaster SET c_deptname = @deptname WHERE c_deptid = @deptId", conn))
@@ -28,7 +28,7 @@ namespace MasterProject.Repositories
             conn.Close();
         }
 
-        public void DeleteEmployees(int deptId)
+        public void DeleteDepartments(int deptId)
         {
             conn.Open();
             using (var cmd = new NpgsqlCommand("DELETE FROM t_city WHERE c_cityid = @cityId", conn))

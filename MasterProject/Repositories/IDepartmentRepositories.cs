@@ -11,5 +11,7 @@ namespace MasterProject.Repositories
     public interface IDepartmentRepositories
     {
         void AddDepartments(DepartmentModel dept);
+        public void UpdateDepartments(DepartmentModel department);
+        public void DeleteDepartments(int deptId);
     }
 }
