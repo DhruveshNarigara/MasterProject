@@ -1,0 +1,145 @@
+@model IEnumerable<MasterProject.Models.UserModel>
+
+<div class="btn-group ">
+    <button class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+
+</div>
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email </label>
+                        <input type="email" class="form-control" name=""id="email1" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password1" >
+                        <a href="#" class="text-decoration-none text-muted">Forgot password?</a>
+                    </div>
+                    <button type="submit" id="btnlogin" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="signupModalLabel">Register</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="regForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" id="btnreg"
+                    data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@* Add the following script in your section *@
+
+@section Scripts 
+{
+    <script>
+        $(document).ready(function () {
+           $('#regForm').on('submit', function (e) {
+                e.preventDefault();
+                Register();
+            });
+
+            function Register() {
+                var user = {
+                    @* username: $('#username').val(), *@
+                    c_username: $('#username').val(),
+                    c_email: $('#email').val(),
+                    c_password: $('#password').val()
+                      
+                };
+
+                console.log('Registration data:', user);
+
+                $.ajax({
+                    url: '/UserAjax/Registration/',
+                    type: 'POST',
+                    data: JSON.stringify(user),
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (result) {
+                        @* console.log('Registration result:', result); *@
+                        @* $('#signupModal').modal('hide'); *@
+                        $('#loginModal').modal('hide');
+                        @* alert(result.message);      *@
+                        window.location.href = '/Home/Index';
+                    }
+                });
+            }
+
+            
+
+            $('#loginForm').on('submit', function (e) {
+                e.preventDefault();
+                login();
+            });
+
+            function login() {
+                var user = {
+                    @* username: $('#username').val(), *@
+                    c_email: $('#email').val(),
+                    c_password: $('#password').val()
+                      
+                };
+
+                console.log('Registration data:', user);
+
+                $.ajax({
+                    url: '/UserAjax/Login/',
+                    type: 'POST',
+                    data: JSON.stringify(user),
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (result) {
+                        @* console.log('Registration result:', result); *@
+                        @* $('#signupModal').modal('hide'); *@
+                        $('#loginModal').modal('hide');
+                        @* alert(result.message);      *@
+                        window.location.href = '/Home/Index';
+                    }
+                });
+            }
+        });
+    </script>
+}
+
+
