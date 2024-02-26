@@ -42,6 +42,30 @@ namespace MasterProject.Repositories
             return deptList;
         }
 
+        public DepartmentModel GetDeptById(int deptId)
+        {
+            var dept = new DepartmentModel();
+
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("SELECT * FROM t_deptmaster WHERE c_deptid = @deptId", conn))
+            {
+                cmd.Parameters.AddWithValue("@deptId", deptId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        dept.c_deptid = Convert.ToInt32(reader["c_deptid"]);
+                        dept.c_deptname = reader["c_deptname"].ToString();
+                    }
+                }
+            }
+            conn.Close();
+
+            return dept;
+        }
+
+
         public void UpdateDepartments(DepartmentModel department)
         {
             conn.Open();
@@ -58,9 +82,9 @@ namespace MasterProject.Repositories
         public void DeleteDepartments(int deptId)
         {
             conn.Open();
-            using (var cmd = new NpgsqlCommand("DELETE FROM t_city WHERE c_cityid = @cityId", conn))
+            using (var cmd = new NpgsqlCommand("DELETE FROM t_deptmaster WHERE c_deptid = @deptId", conn))
             {
-                cmd.Parameters.AddWithValue("@cityId", deptId);
+                cmd.Parameters.AddWithValue("@deptId", deptId);
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {

@@ -1,8 +1,9 @@
 @model IEnumerable<DepartmentModel>
 
 <button class="btn btn-outline-primary" style="float: left; margin-top: 10px;"
-    onclick="location.href='@Url.Action("AddDept", "Department")'">Add City</button>
-<h2 class="text-center">All Cities</h2>
+    onclick="location.href='@Url.Action("AddDept", "Department")'">Add Department</button>
+    <br>
+<h2 class="text-center">All Departments</h2>
 
 <table class="table table-responsive table-striped">
     <thead>
@@ -20,7 +21,7 @@
                 <td>@city.c_deptname</td>
                 <td>
                     <a class="btn btn-primary"
-                        href="@Url.Action("UpdateCity", "MyCitys", new { cityId = city.c_deptid })">Edit</a>
+                        href="@Url.Action("UpdateDept", "Department", new { deptId = city.c_deptid })">Edit</a>
 
                     <form method="post" action="@Url.Action("DeleteDept", "Department")" style="display:inline;">
                         @Html.Hidden("deptId", city.c_deptid)

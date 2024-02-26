@@ -23,10 +23,13 @@ namespace MasterProject.Controllers
             _deptrepo = departmentRepositories;
         }
 
+
+
         public IActionResult Index()
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult AddDept()
         {
@@ -36,10 +39,8 @@ namespace MasterProject.Controllers
         [HttpPost]
         public IActionResult AddDept(DepartmentModel dept){
             _deptrepo.AddDepartments(dept);
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("AllDepartments");
         }
-
-        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -52,6 +53,33 @@ namespace MasterProject.Controllers
           var dept = _deptrepo.GetAlldept();
           return View(dept);
         }
+
+        public IActionResult UpdateDept(int deptId)
+        {
+            var dept = _deptrepo.GetDeptById(deptId);
+            return View(dept);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateDept(DepartmentModel dept)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                _deptrepo.UpdateDepartments(dept);
+                return RedirectToAction("AllDepartments");
+            }
+
+            return View(dept);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteDept(int deptId)
+        {
+            _deptrepo.DeleteDepartments(deptId);
+            return RedirectToAction("AllDepartments");
+        }
+
 
         
     }
