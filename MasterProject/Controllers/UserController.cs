@@ -16,9 +16,12 @@ namespace MasterProject.Controllers
     {
         private readonly ILogger<UserController> _logger;
 
-        public UserController(ILogger<UserController> logger)
+        private readonly IUserRepositories _userRepositories;
+
+        public UserController(ILogger<UserController> logger, IUserRepositories userRepositories)
         {
             _logger = logger;
+            _userRepositories = userRepositories;
         }
 
         public IActionResult Index()
@@ -30,13 +33,36 @@ namespace MasterProject.Controllers
         {
             return View();
         }
+        
+        [HttpPost]
+        public IActionResult UserRegister(UserModel reg)
+        {
+            _userRepositories.UserRegister(reg);
+            return RedirectToAction("UserLogin");
+        }
 
-         public IActionResult UserLogin()
+        public IActionResult UserLogin()
         {
             return View();
         }
 
-         public IActionResult Logout()
+        [HttpPost]
+        public IActionResult UserLogin(UserModel Login)
+        {
+            bool isAuthenticated = _userRepositories.UserLogin(Login);
+            
+            if(isAuthenticated)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            else
+            {
+                TempData["Message"] = "User does not exist. Please register.";
+                return RedirectToAction("UserLogin");
+            }
+        }
+
+        public IActionResult Logout()
         {
             return View();
         }
