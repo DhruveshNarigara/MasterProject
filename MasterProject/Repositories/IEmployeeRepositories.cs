@@ -10,6 +10,10 @@ namespace MasterProject.Repositories
 {
     public interface IEmployeeRepositories
     {
-        void AddEmployees(EmployeeModel emp);
+        IEnumerable<EmployeeModel> GetAllEmployees();
+        EmployeeModel GetEmployeeById(int id);
+        void AddEmployee(EmployeeModel employee);
+        void UpdateEmployee(EmployeeModel employee);
+        void DeleteEmployee(int id);
     }
 }
