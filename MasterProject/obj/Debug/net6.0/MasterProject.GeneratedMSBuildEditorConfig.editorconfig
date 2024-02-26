@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/Views/Department/AddDepartment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudC9BZGREZXBhcnRtZW50LmNzaHRtbA==
+[/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/Views/Department/AddDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudC9BZGREZXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/Views/Department/AllDepartments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudC9BbGxEZXBhcnRtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/Views/Department/UpdateDept.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVwYXJ0bWVudC9VcGRhdGVEZXB0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/Views/Home/Index.cshtml]

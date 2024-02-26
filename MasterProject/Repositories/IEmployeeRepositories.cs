@@ -11,5 +11,7 @@ namespace MasterProject.Repositories
     public interface IEmployeeRepositories
     {
         void AddEmployees(EmployeeModel emp);
+
+        
     }
 }

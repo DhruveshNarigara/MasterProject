@@ -1,0 +1,51 @@
+@model DepartmentModel
+@{
+    ViewData["Title"] = "Add deparment";
+} 
+
+<html>
+<head>
+ 
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .container {
+      background-color: #ffffff; /* White container background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+      max-width: 500px; /* Limit container width */
+      margin: auto; /* Center container */
+      margin-top: 50px; /* Add some top margin for better spacing */
+    }
+    h2 {
+      text-align: center;
+      color: #007bff; /* Bootstrap primary color */
+      margin-bottom: 30px;
+    }
+    /* Form styles */
+    .form-group label {
+      font-weight: bold;
+    }
+    /* Add some margin to the button */
+    button[type="submit"] {
+      margin-top: 20px;
+      width: 100%; /* Make the button full-width */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add Department</h2>
+    <form asp-action="AddDept" method="post">
+      <div class="form-group">
+        <label asp-for="c_deptname">Department Name:</label>
+        <input type="text" class="form-control" id="c_deptname" asp-for="c_deptname" placeholder="Enter Department Name">
+      </div>
+      <button type="submit" class="btn btn-primary">Add Department</button>
+    </form>
+  </div>
+
+</body>
+</html>

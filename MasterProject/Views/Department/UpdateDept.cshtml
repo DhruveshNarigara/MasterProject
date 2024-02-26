@@ -1,0 +1,16 @@
+@model DepartmentModel
+
+<h2>Update City</h2>
+
+<form asp-action="UpdateDept" method="post" class="w-50">
+    <input type="hidden" asp-for="c_deptid" />
+
+    <div class="form-group ">
+        <label asp-for="c_deptname"></label>
+        <input asp-for="c_deptname" class="form-control" />
+        <span asp-validation-for="c_deptname" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary my-3">Update </button> |  <span>
+    <a asp-action="AllDepartments">Back to All Deparment</a>
+</form>

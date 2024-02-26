@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MasterProject.Models;
+using MasterProject.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -13,18 +15,31 @@ namespace MasterProject.Controllers
     {
         private readonly ILogger<DepartmentController> _logger;
 
-        public DepartmentController(ILogger<DepartmentController> logger)
+        private readonly IDepartmentRepositories _deptrepo;
+
+        public DepartmentController(ILogger<DepartmentController> logger, IDepartmentRepositories departmentRepositories)
         {
             _logger = logger;
+            _deptrepo = departmentRepositories;
         }
+
+
 
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult AddDepartment()
+
+        [HttpGet]
+        public IActionResult AddDept()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddDept(DepartmentModel dept){
+            _deptrepo.AddDepartments(dept);
+            return RedirectToAction("AllDepartments");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -32,5 +47,40 @@ namespace MasterProject.Controllers
         {
             return View("Error!");
         }
+
+        [HttpGet]
+        public IActionResult AllDepartments(){
+          var dept = _deptrepo.GetAlldept();
+          return View(dept);
+        }
+
+        public IActionResult UpdateDept(int deptId)
+        {
+            var dept = _deptrepo.GetDeptById(deptId);
+            return View(dept);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateDept(DepartmentModel dept)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                _deptrepo.UpdateDepartments(dept);
+                return RedirectToAction("AllDepartments");
+            }
+
+            return View(dept);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteDept(int deptId)
+        {
+            _deptrepo.DeleteDepartments(deptId);
+            return RedirectToAction("AllDepartments");
+        }
+
+
+        
     }
 }
