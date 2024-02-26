@@ -436,19 +436,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/dhruveshnarigara/.nuget/packages/": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj",
+      "projectUniqueName": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
       "projectName": "MasterProject",
-      "projectPath": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj",
-      "packagesPath": "/Users/dhruveshnarigara/.nuget/packages/",
-      "outputPath": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/obj/",
+      "projectPath": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "E:\\CasePoint\\MasterProject\\MasterProject\\MasterProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/dhruveshnarigara/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -496,7 +496,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.418/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

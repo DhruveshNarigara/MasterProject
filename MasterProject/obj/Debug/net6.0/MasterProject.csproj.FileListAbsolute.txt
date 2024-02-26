@@ -32,3 +32,37 @@
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.pdb
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.genruntimeconfig.cache
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/obj/Debug/net6.0/ref/MasterProject.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\appsettings.Development.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\appsettings.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.staticwebassets.runtime.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.exe
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.deps.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.runtimeconfig.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.pdb
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\Npgsql.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\System.Text.Json.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.AssemblyReference.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.AssemblyInfoInputs.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.AssemblyInfo.cs
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.CoreCompileInputs.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.MvcApplicationPartsAssemblyInfo.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.RazorAssemblyInfo.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.RazorAssemblyInfo.cs
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\staticwebassets.build.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\staticwebassets.development.json
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\bundle\MasterProject.styles.css
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\projectbundle\MasterProject.bundle.scp.css
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.CopyComplete
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\refint\MasterProject.dll
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.pdb
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.genruntimeconfig.cache
+E:\CasePoint\MasterProject\MasterProject\MasterProject\obj\Debug\net6.0\ref\MasterProject.dll
