@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\C#\MasterProject\MasterProject\MasterProject
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/C\#/MasterProject/MasterProject/MasterProject/Views/DepartmentAjax/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudEFqYXhcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/C\#/MasterProject/MasterProject/MasterProject/Views/Department/AddDept.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBZGREZXB0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

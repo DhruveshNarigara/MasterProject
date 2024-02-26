@@ -12,6 +12,6 @@ namespace MasterProject.Repositories
     {
         void UserRegister(UserModel reg);
 
-        void UserLogin(UserModel login);
+        bool UserLogin(UserModel login);
     }
 }
