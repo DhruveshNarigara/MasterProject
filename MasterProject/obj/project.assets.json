@@ -436,26 +436,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\darsh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MasterProject\\MasterProject\\MasterProject.csproj",
+      "projectUniqueName": "E:\\CASE POINT\\internship\\assignment\\MASTER PROJECT\\MasterProject\\MasterProject\\MasterProject.csproj",
       "projectName": "MasterProject",
-      "projectPath": "D:\\MasterProject\\MasterProject\\MasterProject.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\MasterProject\\MasterProject\\obj\\",
+      "projectPath": "E:\\CASE POINT\\internship\\assignment\\MASTER PROJECT\\MasterProject\\MasterProject\\MasterProject.csproj",
+      "packagesPath": "C:\\Users\\darsh\\.nuget\\packages\\",
+      "outputPath": "E:\\CASE POINT\\internship\\assignment\\MASTER PROJECT\\MasterProject\\MasterProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\darsh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

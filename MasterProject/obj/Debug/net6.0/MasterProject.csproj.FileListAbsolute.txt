@@ -66,3 +66,37 @@ D:\MasterProject\MasterProject\obj\Debug\net6.0\refint\MasterProject.dll
 D:\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.pdb
 D:\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.genruntimeconfig.cache
 D:\MasterProject\MasterProject\obj\Debug\net6.0\ref\MasterProject.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\appsettings.Development.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\appsettings.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.staticwebassets.runtime.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.exe
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.deps.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.runtimeconfig.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\MasterProject.pdb
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\Npgsql.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\System.Text.Json.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.AssemblyReference.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.AssemblyInfoInputs.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.AssemblyInfo.cs
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.CoreCompileInputs.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.MvcApplicationPartsAssemblyInfo.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.RazorAssemblyInfo.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.RazorAssemblyInfo.cs
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\staticwebassets.build.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\staticwebassets.development.json
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\bundle\MasterProject.styles.css
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\scopedcss\projectbundle\MasterProject.bundle.scp.css
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.csproj.CopyComplete
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\refint\MasterProject.dll
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.pdb
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\MasterProject.genruntimeconfig.cache
+E:\CASE POINT\internship\assignment\MASTER PROJECT\MasterProject\MasterProject\obj\Debug\net6.0\ref\MasterProject.dll
