@@ -69,7 +69,7 @@ namespace MasterProject.Repositories
             return employee;
         }
 
-        public void AddEmployee(EmployeeModel employee)
+        public void AddEmployee(EmployeeModel employee,string image)
         {
             string sql = "INSERT INTO t_employeemaster (c_uid, c_empname, c_empgender, c_empdob, c_empshift, c_empdept, c_empimage) VALUES (@uid, @name, @gender, @dob, @shift, @dept, @image)";
                  conn.Open();
@@ -81,7 +81,7 @@ namespace MasterProject.Repositories
                 command.Parameters.AddWithValue("@dob", employee.c_empdob);
                 command.Parameters.AddWithValue("@shift", employee.c_empshift);
                 command.Parameters.AddWithValue("@dept", employee.c_empdept);
-                command.Parameters.AddWithValue("@image", employee.c_empimage);
+                command.Parameters.AddWithValue("@image", image);
 
                 command.ExecuteNonQuery();
                  conn.Close();
@@ -111,7 +111,7 @@ namespace MasterProject.Repositories
         public void DeleteEmployee(int id)
         {
             string sql = "DELETE FROM t_employeemaster WHERE c_empid = @id";
- conn.Open();
+           conn.Open();
             using (var command = new NpgsqlCommand(sql, conn))
             {
                 command.Parameters.AddWithValue("@id", id);

@@ -25,5 +25,7 @@ namespace MasterProject.Models
         public string c_empimage{get;set;}
 
         public IFormFile c_empimageFile{get;set;}
+
+        
     }
 }

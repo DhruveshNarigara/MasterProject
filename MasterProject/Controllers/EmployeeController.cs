@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using MasterProject.Models;
 using MasterProject.Repositories;
-using Npgsql;
 
 namespace MasterProject.Controllers
 {
@@ -41,15 +40,31 @@ namespace MasterProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(EmployeeModel employee)
+        public IActionResult Create(EmployeeModel employee, IFormFile image)
         {
-            if (employee.c_empimage!= null)
-            {
-                employee.c_empimage = UploadFile(employee.c_empimageFile, "images");
-            }
+            // if (employee.c_empimageFile!= null)
+            // {
+            //     employee.c_empimage = UploadFile(employee.c_empimageFile, "images");
+            // }
 
-            _employeerepo.AddEmployee(employee);
-            return RedirectToAction("Index");
+            // _employeerepo.AddEmployee(employee);
+            // return RedirectToAction("Index");
+
+            if (image!= null && image.Length > 0)
+            {
+                var filename = Path.GetFileName(image.FileName);
+                Console.WriteLine("filename : " , filename);
+                var filepath = Path.Combine(Directory.GetCurrentDirectory() , "wwwroot" , "images" ,filename );
+                Console.WriteLine("filepath : " + filepath);
+                using(var stream = new FileStream(filepath , FileMode.Create)){
+                    image.CopyTo(stream);
+                }
+                string imagepath = "/images/" + filename;
+                _employeerepo.AddEmployee(employee ,imagepath);
+                return RedirectToAction("Index");
+            }else{
+            return RedirectToAction("Index", "Home");
+            }
         }
 
         private string UploadFile(IFormFile file, string folderName)
