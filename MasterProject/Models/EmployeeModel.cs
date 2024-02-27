@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
-using Npgsql;
+// using Npgsql;
 using MasterProject.Models;
 using MasterProject.Repositories;
 
@@ -12,7 +13,8 @@ namespace MasterProject.Models
     {
         public int ?c_empid { get; set; }
 
-        // public int c_uid { get; set; }
+        
+        public int c_uid { get; set; }
 
         public string c_empname { get; set; }
         public string c_empgender { get; set; }

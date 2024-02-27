@@ -46,7 +46,7 @@ namespace MasterProject.Controllers
             return View();
         }
 
-        [HttpPost]
+       [HttpPost]
         public IActionResult UserLogin(UserModel Login)
         {
             bool isAuthenticated = _userRepositories.UserLogin(Login);

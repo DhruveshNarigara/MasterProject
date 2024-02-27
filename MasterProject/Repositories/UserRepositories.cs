@@ -19,7 +19,7 @@ namespace MasterProject.Repositories
         public void UserRegister(UserModel reg)
         {
             conn.Open();
-            using (var cmd = new NpgsqlCommand("insert into t_loginmaster(c_username,c_email,c_password)values(@username,@email,@password)", conn))
+            using (var cmd = new NpgsqlCommand("insert into t_loginmaster(c_username,c_email,c_password,c_role)values(@username,@email,@password,'Employee')", conn))
             {
                 cmd.Parameters.AddWithValue("@username", reg.c_username);
                 cmd.Parameters.AddWithValue("@email", reg.c_email);
@@ -39,7 +39,7 @@ namespace MasterProject.Repositories
             conn.Close();
         }
 
-        public bool UserLogin(UserModel login)
+         public bool UserLogin(UserModel login)
         {
           bool isAuthenticated = false;
             conn.Open();
@@ -70,5 +70,7 @@ namespace MasterProject.Repositories
             return false;
           
         }
+
+      
     }
 }

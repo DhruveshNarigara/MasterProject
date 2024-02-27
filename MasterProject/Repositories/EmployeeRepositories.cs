@@ -7,6 +7,14 @@ namespace MasterProject.Repositories
 {
     public class EmployeeRepositories : CommanRepositories, IEmployeeRepositories
     {
+
+         private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public EmployeeRepositories(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
         public IEnumerable<EmployeeModel> GetAllEmployees()
         {
             var employees = new List<EmployeeModel>();
@@ -21,7 +29,7 @@ namespace MasterProject.Repositories
                     var employee = new EmployeeModel
                     {
                         c_empid = reader.GetInt32(reader.GetOrdinal("c_empid")),
-                        // c_uid = reader.GetInt32(reader.GetOrdinal("c_uid")),
+                        //c_uid = reader.GetInt32(reader.GetOrdinal("c_uid")),
                         c_empname = reader.GetString(reader.GetOrdinal("c_empname")),
                         c_empgender = reader.GetString(reader.GetOrdinal("c_empgender")),
                         c_empdob = reader.GetDateTime(reader.GetOrdinal("c_empdob")),
@@ -69,48 +77,63 @@ namespace MasterProject.Repositories
             return employee;
         }
 
-        public void AddEmployee(EmployeeModel employee)
+        public void AddEmployee(EmployeeModel employee , HttpContext httpContext)
         {
-            conn.Open();
-            using (var cmd = new NpgsqlCommand("INSERT INTO t_employeemaster (c_empname, c_empgender, c_empdob, c_empshift, c_empdept, c_empimage) VALUES ( @name, @gender, @dob, @shift, @dept, @image)", conn))
-            {
+            // conn.Open();
+            // string sql = "INSERT INTO t_employeemaster (c_uid, c_empname, c_empgender, c_empdob, c_empshift, c_empdept, c_empimage) VALUES (@uid, @name, @gender, @dob, @shift, @dept, @image)";
 
+            // using (var command = new NpgsqlCommand(sql, conn))
+            // {
+            //       int? userId = httpContext.Session.GetInt32("id");
+            //     command.Parameters.AddWithValue("@name", employee.c_empname);
+            //     command.Parameters.AddWithValue("@gender", employee.c_empgender);
+            //     command.Parameters.AddWithValue("@dob", employee.c_empdob);
+            //     command.Parameters.AddWithValue("@shift", employee.c_empshift);
+            //     command.Parameters.AddWithValue("@dept", employee.c_empdept);
+            //     command.Parameters.AddWithValue("@image", employee.c_empimagePath);
+
+            //     command.ExecuteNonQuery(); // Execute the command to insert data
+            // }
+
+            conn.Open();
+            using (var cmd = new NpgsqlCommand("INSERT INTO t_employeemaster(c_uid, c_empname, c_empgender, c_empdob, c_empshift, c_empdept, c_empimage) VALUES (@uid, @name, @gender, @dob, @shift, @dept, @image)", conn))
+            {
+                int? c_uid = httpContext.Session.GetInt32("c_uid");
                 cmd.Parameters.AddWithValue("@name", employee.c_empname);
                 cmd.Parameters.AddWithValue("@gender", employee.c_empgender);
                 cmd.Parameters.AddWithValue("@dob", employee.c_empdob);
                 cmd.Parameters.AddWithValue("@shift", employee.c_empshift);
                 cmd.Parameters.AddWithValue("@dept", employee.c_empdept);
                 cmd.Parameters.AddWithValue("@image", employee.c_empimagePath);
-
-
-
-
-                cmd.ExecuteNonQuery(); // Execute the command to insert data
+                cmd.ExecuteNonQuery();
             }
-
             conn.Close();
         }
 
 
-        public void UpdateEmployee(EmployeeModel employee)
-        {
-            string sql = "UPDATE t_employeemaster SET  c_empname = @name, c_empgender = @gender, c_empdob = @dob, c_empshift = @shift, c_empdept = @dept, c_empimage = @image WHERE c_empid = @id";
-            conn.Open();
-            using (var command = new NpgsqlCommand(sql, conn))
-            {
-                // command.Parameters.AddWithValue("@uid", employee.c_uid);
-                command.Parameters.AddWithValue("@name", employee.c_empname);
-                command.Parameters.AddWithValue("@gender", employee.c_empgender);
-                command.Parameters.AddWithValue("@dob", employee.c_empdob);
-                command.Parameters.AddWithValue("@shift", employee.c_empshift);
-                command.Parameters.AddWithValue("@dept", employee.c_empdept);
-                command.Parameters.AddWithValue("@image", employee.c_empimagePath);
-                command.Parameters.AddWithValue("@id", employee.c_empid);
+       public void UpdateEmployee(EmployeeModel employee)
+{
+    string sql = "UPDATE t_employeemaster SET  c_empname = @name, c_empgender = @gender, c_empdob = @dob, c_empshift = @shift, c_empdept = @dept WHERE c_empid = @id";
+    conn.Open();
+    using (var command = new NpgsqlCommand(sql, conn))
+    {
+        command.Parameters.AddWithValue("@name", employee.c_empname);
+        command.Parameters.AddWithValue("@gender", employee.c_empgender);
+        command.Parameters.AddWithValue("@dob", employee.c_empdob);
+        command.Parameters.AddWithValue("@shift", employee.c_empshift);
+        command.Parameters.AddWithValue("@dept", employee.c_empdept);
+       // command.Parameters.AddWithValue("@image", employee.c_empimagePath); // Assuming c_empimagePath holds the image path
+        command.Parameters.AddWithValue("@id", employee.c_empid);
 
-                command.ExecuteNonQuery();
-                conn.Close();
-            }
-        }
+        // Make sure to set the value of the @image parameter
+        // For example, assuming c_empimagePath is a property that holds the image path:
+        //command.Parameters["@image"].Value = employee.c_empimagePath;
+
+        command.ExecuteNonQuery();
+        conn.Close();
+    }
+}
+
 
         public void DeleteEmployee(int id)
         {

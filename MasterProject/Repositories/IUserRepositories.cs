@@ -13,5 +13,7 @@ namespace MasterProject.Repositories
         void UserRegister(UserModel reg);
 
         bool UserLogin(UserModel login);
+
+        // UserModel GetLoginMasterByEmail(string email);
     }
 }

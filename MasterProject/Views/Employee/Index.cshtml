@@ -1,4 +1,4 @@
- @* @model List<EmployeeModel>
+@model List<EmployeeModel>
 
 @{
     ViewData["Title"] = "ViewEmployee";
@@ -6,9 +6,9 @@
 <div class="container">
     <h2 class="text-center">Get All Student</h2>
 
-    <p>
+    @* <p>
     <a asp-action="ViewUser" class="btn btn-outline-primary">Add New Book</a>
-    </p> 
+    </p> *@
 
     <div class="card mb-4">
         <div class="card-body">
@@ -16,7 +16,7 @@
             <table class="table table-responsive table-striped ">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        @* <th>Id</th> *@
                         <th>Name</th>
                         <th>Gender</th>
                         <th>DOB</th>
@@ -29,43 +29,45 @@
 
 
                         @* <th>Actions</th> *@
-                    @* </tr>
+                    </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
                             @* <td>@item.c_itemid</td> *@
-                            @* <td>@item.c_empname</td>
+                            <td>@item.c_empname</td>
                             <td>@item.c_empgender</td>
                             <td>@item.c_empdob</td>
                             <td>@item.c_empshift</td>
 
                             <td>@item.c_empdept</td>
                             <td>
-                                <img src="~/images/@item.c_empimagePath" class="rounded-circle" height="120" width="90"
+                                <img src="~/images/@item.c_empimagePath" class="rounded-squre" height="100" width="100"
                                     asp-append-version="true" />
 
-                            </td> *@
+                            </td>
 
 
 
 
-                            @* <td>
+                            <td>
 
-                                <a asp-action="EditEmployee" asp-route-id="@item.c_empid"
-                                    class="btn btn-primary mx-2">Edit</a>
-
-                                <button class="btn btn-danger" onclick="confirmDelete('@item.c_empid')">Delete</button>
-                               
+                                   <a asp-action="EditEmployee" asp-route-id="@item.c_empid" class="btn btn-warning">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.c_empid" class="btn btn-info">Details</a> |
+                        <form method="post" action="@Url.Action("Delete", "Employee")" style="display:inline;">
+                            @Html.Hidden("id", item.c_empid)
+                            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this employee?');" type="submit">Delete</button>
+                        </form>
                             </td>
                         </tr>
+                
                     }
                 </tbody>
-            </table> *@
+            </table>
 
 
-        @* </div>
+        </div>
     </div>
 </div>
 
@@ -86,5 +88,6 @@
                     alert('Error deleting category.');
                 }
             });
-        } *@
-    @* } *@
+        }
+    }
+</script>

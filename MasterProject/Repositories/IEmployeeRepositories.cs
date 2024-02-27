@@ -12,7 +12,7 @@ namespace MasterProject.Repositories
     {
         IEnumerable<EmployeeModel> GetAllEmployees();
         EmployeeModel GetEmployeeById(int id);
-        void AddEmployee(EmployeeModel employee);
+        void AddEmployee(EmployeeModel employee,HttpContext httpContext);
         void UpdateEmployee(EmployeeModel employee);
         void DeleteEmployee(int id);
     }

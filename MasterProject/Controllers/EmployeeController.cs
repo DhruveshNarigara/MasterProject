@@ -18,18 +18,21 @@ namespace MasterProject.Controllers
         private readonly IDepartmentRepositories _deptrepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeRepositories employeerepo, IDepartmentRepositories deptrepo, IWebHostEnvironment hostingEnvironment)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeRepositories employeerepo, IDepartmentRepositories deptrepo, IWebHostEnvironment hostingEnvironment,IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             _employeerepo = employeerepo;
             _deptrepo = deptrepo;
             _webHostEnvironment = hostingEnvironment;
+             _httpContextAccessor = httpContextAccessor;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        // public IActionResult Index()
+        // {
+        //     return View();
+        // }
         public IActionResult create()
         {
             var dept = _deptrepo.GetAlldept();
@@ -42,11 +45,11 @@ namespace MasterProject.Controllers
         {
             if (emp.c_empimageFile != null && emp.c_empimageFile.Length > 0)
             {
-                emp.c_empimagePath = UploadFile(emp.c_empimageFile, "images");
+                emp.c_empimagePath = UploadFile(emp.c_empimageFile, "Images");
             }
 
-            _employeerepo.AddEmployee(emp);
-            return RedirectToAction("Index", "Admin");
+            _employeerepo.AddEmployee(emp,HttpContext);
+            return RedirectToAction("Index", "Employee");
         }
 
         private string UploadFile(IFormFile file, string folderName)
@@ -67,21 +70,21 @@ namespace MasterProject.Controllers
             return uniqueFileName;
         }
 
-        public IActionResult ViewStudent()
+        public IActionResult Index()
         {
-
+            // int id= _httpContextAccessor.HttpContext.Session.GetInt32("c_uid");
             var d = _employeerepo.GetAllEmployees();
 
             return View(d);
         }
 
 
-        public IActionResult Details(int id)
-        {
-            // Add your session check logic here if needed
-            var employee = _employeerepo.GetEmployeeById(id);
-            return View(employee);
-        }
+        // public IActionResult Details(int id)
+        // {
+        //     // Add your session check logic here if needed
+        //     var employee = _employeerepo.GetEmployeeById(id);
+        //     return View(employee);
+        // }
 
         [HttpGet]
         public IActionResult EditEmployee(int id)
@@ -97,7 +100,7 @@ namespace MasterProject.Controllers
         public IActionResult EditEmployee(EmployeeModel emp)
         {
             _employeerepo.UpdateEmployee(emp);
-            return RedirectToAction("GetAllEmployee", "Admin");
+            return RedirectToAction("Index", "Employee");
         }
 
         public IActionResult Delete(int id)
@@ -113,6 +116,12 @@ namespace MasterProject.Controllers
             // Add your session check logic here if needed
             _employeerepo.DeleteEmployee(id);
             return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var employee = _employeerepo.GetEmployeeById(id);
+            return View(employee);
         }
 
         

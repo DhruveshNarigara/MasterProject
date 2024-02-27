@@ -1,0 +1,63 @@
+@model MasterProject.Models.EmployeeModel
+
+<h2>Employee Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empid)
+        </dd>
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empname)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empgender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empgender)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empdob)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empdob)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empshift)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empshift)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empdept)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.c_empdept)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empimagePath)
+            
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Url.Action("GetPhoto", "Employee", new { id = Model.c_empimagePath })" alt="Employee Photo" width="100" />
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-success">Back to Employee List</a>
+</div>

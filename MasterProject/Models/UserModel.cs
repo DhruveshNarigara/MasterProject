@@ -15,5 +15,7 @@ namespace MasterProject.Models
 
         public string? c_password {get ; set ;}
 
+        public string ?c_role{get ; set ;}
+
     }
 }
