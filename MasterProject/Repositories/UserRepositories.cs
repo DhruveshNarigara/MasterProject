@@ -26,15 +26,15 @@ namespace MasterProject.Repositories
                 cmd.Parameters.AddWithValue("@password", reg.c_password);
                 cmd.ExecuteNonQuery();
             }
-            var session = _httpContextAccessor.HttpContext?.Session;
-            if(session!=null)
-            {
-                session.SetString("email",reg.c_email);
-                session.SetInt32("id",reg.c_id);
+            // var session = _httpContextAccessor.HttpContext?.Session;
+            // if(session!=null)
+            // {
+            //     session.SetString("email",reg.c_email);
+            //     session.SetInt32("id",reg.c_id);
 
-                Console.WriteLine("Session id " + reg.c_id);
-                Console.WriteLine("Session id " + reg.c_email);
-            }
+            //     Console.WriteLine("Session id " + reg.c_id);
+            //     Console.WriteLine("Session id " + reg.c_email);
+            // }
 
             conn.Close();
         }
@@ -48,22 +48,22 @@ namespace MasterProject.Repositories
                 cmd.Parameters.AddWithValue("@email",login.c_email);
                 cmd.Parameters.AddWithValue("@password",login.c_password);
                 var reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    isAuthenticated=true;
-                    var session = _httpContextAccessor.HttpContext?.Session;
-                    if (session != null)
-                    {
-                        session.SetString("email", login.c_email);
-                        session.SetInt32("id", login.c_id);
+                // if (reader.Read())
+                // {
+                //     isAuthenticated=true;
+                //     var session = _httpContextAccessor.HttpContext?.Session;
+                //     if (session != null)
+                //     {
+                //         session.SetString("email", login.c_email);
+                //         session.SetInt32("id", login.c_id);
 
-                        Console.WriteLine("Session Email is  : " + login.c_email);
+                //         Console.WriteLine("Session Email is  : " + login.c_email);
                         
-                    }
-                    conn.Close();
+                //     }
+                //     conn.Close();
                     
-                    return isAuthenticated;
-                }
+                //     return isAuthenticated;
+                // }
             
             }
             conn.Close();

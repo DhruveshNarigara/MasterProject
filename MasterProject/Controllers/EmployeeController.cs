@@ -10,6 +10,7 @@ using MasterProject.Repositories;
 
 namespace MasterProject.Controllers
 {
+    // [Route("[controller]")]
     public class EmployeeController : Controller
     {
         private readonly ILogger<EmployeeController> _logger;
@@ -25,36 +26,30 @@ namespace MasterProject.Controllers
             _webHostEnvironment = hostingEnvironment;
         }
 
-        public IActionResult Index()
+        // public IActionResult Index()
+        // {
+        //     return View();
+        // }
+        public IActionResult create()
         {
-            // Add your session check logic here if needed
-            var employees = _employeerepo.GetAllEmployees();
-            return View(employees);
-        }
-
-        public IActionResult Create()
-        {
-           var dept = _deptrepo.GetAlldept();
+            var dept = _deptrepo.GetAlldept();
             ViewBag.Departments = new SelectList(dept, "c_deptid", "c_deptname");
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(EmployeeModel employee)
+        public IActionResult create(EmployeeModel emp)
         {
-            if (employee.c_empimageFile != null && employee.c_empimageFile.Length > 0)
+            if (emp.c_empimageFile != null && emp.c_empimageFile.Length > 0)
             {
-                employee.c_empimage = UploadFile(employee.c_empimageFile, "images");
+                emp.c_empimagePath = UploadFile(emp.c_empimageFile, "images");
             }
 
-            _employeerepo.AddEmployee(employee);
-            return RedirectToAction("Index");
+            _employeerepo.AddEmployee(emp);
+            return RedirectToAction("Index", "Employee");
         }
 
-      
-
-       
-       private string UploadFile(IFormFile file, string folderName)
+        private string UploadFile(IFormFile file, string folderName)
         {
             string uniqueFileName = null;
 
@@ -70,42 +65,39 @@ namespace MasterProject.Controllers
             }
 
             return uniqueFileName;
-        }
-
-       
-
-        // public IActionResult GetImage(int id)
-        // {
-        //     var employee = _employeerepo.GetEmployeeById(id);
-        //     var imagePath = employee.c_empimage;
-        //     var imageBytes = System.IO.File.ReadAllBytes(imagePath);
-        //     return File(imageBytes, "image/jpeg");
-        // }
-
-        public IActionResult Details(int id)
-        {
-            // Add your session check logic here if needed
-            var employee = _employeerepo.GetEmployeeById(id);
-            return View(employee);
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Index()
         {
+
+            var d = _employeerepo.GetAllEmployees();
+
+            return View(d);
+        }
+
+
+        // public IActionResult Details(int id)
+        // {
+        //     // Add your session check logic here if needed
+        //     var employee = _employeerepo.GetEmployeeById(id);
+        //     return View(employee);
+        // }
+
+        [HttpGet]
+        public IActionResult EditEmployee(int id)
+        {
+            var departments = _deptrepo.GetAlldept();
             var employee = _employeerepo.GetEmployeeById(id);
-            ViewBag.Departments = new List<string> { "IT", "HR", "Finance" }; // Example departments
+            ViewBag.Departments = new SelectList(departments, "c_deptid", "c_deptname", employee.c_empdept);
             return View(employee);
         }
 
         [HttpPost]
-        public IActionResult Edit(EmployeeModel employee)
-        {
-            if (employee.c_empimage != null)
-            {
-                employee.c_empimage = UploadFile(employee.c_empimageFile, "images");
-            }
 
-            _employeerepo.UpdateEmployee(employee);
-            return RedirectToAction("Index");
+        public IActionResult EditEmployee(EmployeeModel emp)
+        {
+            _employeerepo.UpdateEmployee(emp);
+            return RedirectToAction("Index", "Employee");
         }
 
         public IActionResult Delete(int id)
@@ -122,5 +114,14 @@ namespace MasterProject.Controllers
             _employeerepo.DeleteEmployee(id);
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var employee = _employeerepo.GetEmployeeById(id);
+            return View(employee);
+        }
+
+        
+
     }
 }

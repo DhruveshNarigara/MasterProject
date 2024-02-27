@@ -1,4 +1,10 @@
+using MasterProject.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IUserRepositories, UserRepositories>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
 // Add services to the container.
 

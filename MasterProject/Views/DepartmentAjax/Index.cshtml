@@ -1,0 +1,218 @@
+@model IEnumerable<MasterProject.Models.DepartmentModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div>
+    <h2>Books</h2>
+    <table id="bookTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Department ID</th>
+                <th>Department Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- The table data will be filled using AJAX -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Add Book  -->
+
+<div>
+    <h2>Add Book</h2>
+    <form id="addBookForm">
+        <div class="form-group">
+            <label for="booktitle">Department Name</label>
+            <input type="text" class="form-control" id="booktitle" name="booktitle">
+        </div>
+       
+        <br />
+        <button type="button" class="btn btn-primary" id="addBookButton">Add Department</button>
+        <input type="button" onclick="ResetBook()" value="Reset Book.." class="btn btn-danger" />
+    </form>
+</div>
+<br />
+
+<!-- Edit Book Modal -->
+<div class="modal fade" id="editBookModal" tabindex="-1" role="dialog" aria-labelledby="editBookModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editBookModalLabel">Edit Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editBookForm">
+                    <input type="hidden" id="editBookId" name="editBookId">
+                    <div class="form-group">
+                        <label for="editBookTitle">Title:</label>
+                        <input type="text" class="form-control" id="editBookTitle" name="editBookTitle">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    id="closeModalButton">Close</button>
+
+
+                @* <button type="button" class="btn btn-secondary" id="closeModalButton">Close</button> *@
+                <button type="button" class="btn btn-danger" id="updateBookButton">Update Book</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+@section Scripts {
+
+    <script>
+        function ResetBook() 
+        {
+            //@* $('#txtid').val(0), *@
+            $('#booktitle').val("");
+            $('#author').val("");
+            $('#price').val("");
+        }
+
+        function ResetBook1() 
+        {
+            $('#addBookForm')[0].reset();
+        }
+        $(document).ready(function () 
+        {
+            loadBooks();
+
+            function loadBooks() 
+            {
+                $.ajax({
+                    url: '/AjaxBook/GetAllBooks',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var bookTable = $('#bookTable tbody');
+                        bookTable.empty();
+                        data.forEach(function (book) {
+                                            const row = `<tr>
+                                                    <td>${book.myid1}</td>
+                                                    <td>${book.booktitle}</td>
+                                                    <td>${book.author}</td>
+                                                    <td>${book.price}</td>
+                                                    <td>
+                                                        <button class="btn btn-primary mx-2 edit" data-id="${book.myid1}">Edit</button>
+                                                        <button class="btn btn-danger delete" data-id="${book.myid1}">Delete</button>
+                                                    </td>
+                                                </tr>`;
+                            bookTable.append(row);
+                        });
+                    }
+                });
+            }
+
+           
+           
+            $('#addBookButton').on('click', addbook);
+             function addbook() 
+             {
+                var book = {
+                    booktitle: $('#booktitle').val(),
+                    author: $('#author').val(),
+                    price: $('#price').val()
+                        
+                };
+                $.ajax({
+                    url: '/AjaxBook/AddBook',
+                    type: 'POST',
+                    data: JSON.stringify(book),
+                    contentType: 'application/json; Charset=utf-8',
+                    success: function (data) {
+                        console.log(data);
+                        loadBooks();
+                        ResetBook();
+                        alert(data.message);
+                    }
+                });
+            }
+
+            $('#bookTable').on('click', '.edit', editBook);
+            function editBook()
+            {
+                var bookId = $(this).data('id');
+                $('#editBookId').val(bookId);
+                $.ajax
+                ({
+                    url: '/AjaxBook/GetBookDetail/' ,
+                    type: 'GET',
+                    data: {id:bookId},
+                    dataType: 'json',
+                    success: function (book) {
+                        $('#editBookTitle').val(book.booktitle);
+                        $('#editBookAuthor').val(book.author);
+                        $('#editBookPrice').val(book.price);
+                    },
+                    error: function(error){
+                        console.log("Edit error:" ,error);
+                    }
+                });
+                $('#editBookModal').modal('show');
+            }
+
+            $('#updateBookButton').on('click',  updateBook);
+            function updateBook()
+            {
+                var book = {
+                    myid1: $('#editBookId').val(),
+                    booktitle: $('#editBookTitle').val(),
+                    author: $('#editBookAuthor').val(),
+                    price: $('#editBookPrice').val()
+                };
+
+                $.ajax({
+                    url: '/AjaxBook/UpdateBookData',
+                    type: 'POST',
+                    data: JSON.stringify(book),
+                    contentType: 'application/json; Charset=utf-8',
+                    success: function (result) {
+                        console.log(result);
+                        loadBooks();
+                        $('#editBookModal').modal('hide');
+                        alert(result.message);
+                    },
+                    error: function(error){
+                        console.log("Update error:",error);
+                    }
+                });
+            }
+
+            $(document).on('click', '.delete', function () {
+                var bookId = $(this).data('id');
+
+                if (confirm("Are you sure you want to delete this book?")) {
+                    $.ajax({
+                        url: '/AjaxBook/DeleteBookConfirmed/' + bookId,
+                        type: 'POST',
+                        dataType: 'json',
+                        success: function (data) {
+                            loadBooks();
+                            alert(data.message);
+                        }
+                    });
+                }
+            });
+
+        });
+    </script>
+}

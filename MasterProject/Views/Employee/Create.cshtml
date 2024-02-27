@@ -12,7 +12,7 @@ var languages = new List<string> { "Gujarati", "Marathi" ,"English"};
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
+        <form asp-action="create" enctype="multipart/form-data" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="c_empname" class="control-label"></label>
@@ -47,31 +47,33 @@ var languages = new List<string> { "Gujarati", "Marathi" ,"English"};
                         id="nightShift" />
                     <label class="form-check-label" for="nightShift">Night Shift</label>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="CATEGORYkDropdown"><b>category<b></label>
-                <select asp-for="c_empdept" class="form-control" id="c_deptname">
-                    <option>Select Category</option>
-                    @foreach (var task in ViewBag.Departments)
-                    {
-                        <option value="@task.Value">@task.Text</option>
-                    }
-                </select>
-</div>
+                    <select asp-for="c_empdept" class="form-control" id="c_deptname">
+                        <option>Select Category</option>
+                        @foreach (var task in ViewBag.Departments)
+                        {
+                            <option value="@task.Value">@task.Text</option>
+                        }
+
+                    </select>
+                </div>
             </div>
-            
+
 
 
 
             <div class="form-group">
-                <label asp-for="c_empimage" class="control-label"></label>
-                <input asp-for="c_empimage" type="file" class="form-control" />
-                <span asp-validation-for="c_empimage" class="text-danger"></span>
+                <label asp-for="c_empimageFile" class="control-label"></label>
+                <input asp-for="c_empimageFile" type="file" class="form-control" />
+                <span asp-validation-for="c_empimagePath" class="text-danger"></span>
             </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
-    </form>
-</div>
 </div>
 
 <div>

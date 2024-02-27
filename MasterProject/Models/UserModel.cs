@@ -9,11 +9,11 @@ namespace MasterProject.Models
     {
 
         public int c_id {get ; set ;}
-        public string ?c_username { get ; set ;}
+        public string? c_username { get ; set ;}
 
-        public string ?c_email { get ; set ;}
+        public string? c_email { get ; set ;}
 
-        public string ?c_password {get ; set ;}
+        public string? c_password {get ; set ;}
 
     }
 }

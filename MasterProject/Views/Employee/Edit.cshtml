@@ -1,9 +1,9 @@
-@model MasterProject.Models.EmployeeModel
+@* @model MasterProject.Models.EmployeeModel
 @* @{
 ViewData["Title"] = "Edit";
 var languages = new List<string> { "Gujarati", "Marathi", "English" };
 } *@
-<h1>Edit</h1>
+@* <h1>Edit</h1>
 
 <h4>Employee Details</h4>
 <hr />
@@ -62,5 +62,4 @@ var languages = new List<string> { "Gujarati", "Marathi", "English" };
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+    } *@
