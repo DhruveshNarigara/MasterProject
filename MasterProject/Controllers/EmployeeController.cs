@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace MasterProject.Controllers
 {
-    [Route("[controller]")]
+   // [Route("[controller]")]
     public class EmployeeController : Controller
     {
         private readonly ILogger<EmployeeController> _logger;
