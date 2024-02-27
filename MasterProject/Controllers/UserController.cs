@@ -53,7 +53,7 @@ namespace MasterProject.Controllers
             
             if(isAuthenticated)
             {
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index","Employee");
             }
             else
             {

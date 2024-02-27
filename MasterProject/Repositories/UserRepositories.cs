@@ -43,15 +43,33 @@ namespace MasterProject.Repositories
         {
             bool isAuthenticated = false;
             conn.Open();
-            using(var cmd = new NpgsqlCommand("select * from t_loginmaster where c_email=@email and c_password=@password",conn))
-            {   
-                cmd.Parameters.AddWithValue("@email",login.c_email);
-                cmd.Parameters.AddWithValue("@password",login.c_password);
-                cmd.ExecuteNonQuery();
+            using (var cmd = new NpgsqlCommand("select * from t_loginmaster where c_email=@email and c_password=@password", conn))
+            {
+                cmd.Parameters.AddWithValue("@email", login.c_email);
+                cmd.Parameters.AddWithValue("@password", login.c_password);
+        
+                using (var dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        isAuthenticated = true;
+                        var session = _httpContextAccessor.HttpContext.Session;
+                        if (session != null)
+                        {
+                            session.SetInt32("id", (int)dr["c_id"]);
+                            session.SetString("email", (string)dr["c_email"]);
+
+                            Console.WriteLine("Session ID: " + session.GetInt32("id"));
+                            Console.WriteLine("Session Email: " + session.GetString("email"));
+                        }
+                    }
+
+                }
+
             }
             conn.Close();
-            return false;
-          
+            return isAuthenticated;
+
         }
     }
 }

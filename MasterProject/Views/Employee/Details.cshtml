@@ -52,8 +52,11 @@
             @Html.DisplayNameFor(model => model.c_empimagePath)
             
         </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.c_empimagePath)
+        </dt>
         <dd class="col-sm-10">
-            <img src="@Url.Action("GetPhoto", "Employee", new { id = Model.c_empimagePath })" alt="Employee Photo" width="100" />
+            <img src="~/images/@Model.c_empimagePath" class="rounded-squre" height="100" width="100" asp-append-version="true" />
         </dd>
     </dl>
 </div>

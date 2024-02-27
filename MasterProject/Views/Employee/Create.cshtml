@@ -50,7 +50,7 @@ var languages = new List<string> { "Gujarati", "Marathi" ,"English"};
                 <div class="form-group">
                     <label for="CATEGORYkDropdown"><b>category<b></label>
                     <select asp-for="c_empdept" class="form-control" id="c_deptname">
-                        <option>Select Category</option>
+                        <option>Select Departments</option>
                         @foreach (var task in ViewBag.Departments)
                         {
                             <option value="@task.Value">@task.Text</option>

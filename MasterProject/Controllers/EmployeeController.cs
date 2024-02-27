@@ -72,8 +72,8 @@ namespace MasterProject.Controllers
 
         public IActionResult Index()
         {
-            // int id= _httpContextAccessor.HttpContext.Session.GetInt32("c_uid");
-            var d = _employeerepo.GetAllEmployees();
+            int id = (int)_httpContextAccessor.HttpContext.Session.GetInt32("id");
+            var d = _employeerepo.GetEmployeeById(id);
 
             return View(d);
         }
@@ -87,8 +87,9 @@ namespace MasterProject.Controllers
         // }
 
         [HttpGet]
-        public IActionResult EditEmployee(int id)
+        public IActionResult EditEmployee()
         {
+             int id = (int)_httpContextAccessor.HttpContext.Session.GetInt32("id");
             var departments = _deptrepo.GetAlldept();
             var employee = _employeerepo.GetEmployeeById(id);
             ViewBag.Departments = new SelectList(departments, "c_deptid", "c_deptname", employee.c_empdept);
@@ -118,8 +119,10 @@ namespace MasterProject.Controllers
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
-        public IActionResult Details(int id)
+        public IActionResult Details()
         {
+             int id = (int)_httpContextAccessor.HttpContext.Session.GetInt32("id");
+
             var employee = _employeerepo.GetEmployeeById(id);
             return View(employee);
         }

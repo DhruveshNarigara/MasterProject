@@ -1,49 +1,55 @@
-@model List<EmployeeModel>
+@model EmployeeModel
 
 @{
     ViewData["Title"] = "ViewEmployee";
 }
 <div class="container">
-    <h2 class="text-center">Get All Student</h2>
+    <h2 class="text-center">Get Your Details</h2>
 
-    @* <p>
-    <a asp-action="ViewUser" class="btn btn-outline-primary">Add New Book</a>
-    </p> *@
-
-    <div class="card mb-4">
-        <div class="card-body">
-
-            <table class="table table-responsive table-striped ">
-                <thead>
-                    <tr>
-                        @* <th>Id</th> *@
-                        <th>Name</th>
-                        <th>Gender</th>
-                        <th>DOB</th>
-                        <th>Shift</th>
-                        <th>Department</th>
-                        <th>Image</th>
+    @* <h2>Employee Details for @Model.c_empname</h2> *@
 
 
-                        <th>Action</th>
+    @if (Model == null || Model.c_empid == 0)
+    {
+        <p>
+            <a asp-action="create" class="btn btn-outline-primary">Add</a>
+        </p>
+    }
+    else
+    {
+        <div class="card mb-4">
+            <div class="card-body">
 
-
-                        @* <th>Actions</th> *@
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
+                <table class="table table-responsive table-striped ">
+                    <thead>
                         <tr>
-                            @* <td>@item.c_itemid</td> *@
-                            <td>@item.c_empname</td>
-                            <td>@item.c_empgender</td>
-                            <td>@item.c_empdob</td>
-                            <td>@item.c_empshift</td>
+                            @* <th>Id</th> *@
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>DOB</th>
+                            <th>Shift</th>
+                            <th>Department</th>
+                            <th>Image</th>
 
-                            <td>@item.c_empdept</td>
+
+                            <th>Action</th>
+
+
+                            @* <th>Actions</th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            @* <td>@item.c_itemid</td> *@
+                            <td>@Model.c_empname</td>
+                            <td>@Model.c_empgender</td>
+                            <td>@Model.c_empdob</td>
+                            <td>@Model.c_empshift</td>
+
+                            <td>@Model.c_empdept</td>
                             <td>
-                                <img src="~/images/@item.c_empimagePath" class="rounded-squre" height="100" width="100"
+                                <img src="~/images/@Model.c_empimagePath" class="rounded-squre" height="100" width="100"
                                     asp-append-version="true" />
 
                             </td>
@@ -53,23 +59,26 @@
 
                             <td>
 
-                                   <a asp-action="EditEmployee" asp-route-id="@item.c_empid" class="btn btn-warning">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.c_empid" class="btn btn-info">Details</a> |
-                        <form method="post" action="@Url.Action("Delete", "Employee")" style="display:inline;">
-                            @Html.Hidden("id", item.c_empid)
-                            <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this employee?');" type="submit">Delete</button>
-                        </form>
+                                <a asp-action="EditEmployee"  class="btn btn-warning">Edit</a>
+                                |
+                                <a asp-action="Details"  class="btn btn-info">Details</a> 
+                                <form method="post"  style="display:inline;">
+                                    @Html.Hidden("id", @Model.c_empid)
+                                    @* <button class="btn btn-danger" onclick="return confirm('Are you sure you want to
+                                delete this employee?');" type="submit">Delete</button> *@
+                                </form>
                             </td>
                         </tr>
-                
-                    }
-                </tbody>
-            </table>
+
+                        
+                    </tbody>
+                </table>
 
 
+            </div>
         </div>
+}
     </div>
-</div>
 
 
 <script>
