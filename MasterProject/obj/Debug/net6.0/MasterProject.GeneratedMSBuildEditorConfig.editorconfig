@@ -8,69 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MasterProject
 build_property.RootNamespace = MasterProject
-build_property.ProjectDir = C:\interns053\MasterProject\MasterProject\MasterProject\
+build_property.ProjectDir = c:\interns053\MasterProject\MasterProject\MasterProject\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\interns053\MasterProject\MasterProject\MasterProject
+build_property.MSBuildProjectDirectory = c:\interns053\MasterProject\MasterProject\MasterProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/AddDept.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/AddDept.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBZGREZXB0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/AllDepartments.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/AllDepartments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBbGxEZXBhcnRtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/UpdateDept.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Department/UpdateDept.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxVcGRhdGVEZXB0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Create.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Edit.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Index.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Home/Index.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Home/Privacy.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/Error.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/User/UserLogin.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/User/UserLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/User/UserRegister.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/User/UserRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/_ViewImports.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/_ViewStart.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/_Layout.cshtml]
+[c:/interns053/MasterProject/MasterProject/MasterProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6lepxo2myt

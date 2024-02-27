@@ -14,6 +14,7 @@ namespace MasterProject.Repositories
 
             using (var command = new NpgsqlCommand(sql, conn))
             {
+                 conn.Open();
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -31,6 +32,7 @@ namespace MasterProject.Repositories
 
                     employees.Add(employee);
                 }
+                  conn.Close();
             }
 
             return employees;
@@ -43,6 +45,7 @@ namespace MasterProject.Repositories
 
             using (var command = new NpgsqlCommand(sql, conn))
             {
+                 conn.Open();
                 command.Parameters.AddWithValue("@id", id);
 
                 var reader = command.ExecuteReader();
@@ -60,6 +63,7 @@ namespace MasterProject.Repositories
                         c_empimage = reader.GetString(reader.GetOrdinal("c_empimage"))
                     };
                 }
+                 conn.Close();
             }
 
             return employee;
@@ -69,7 +73,7 @@ namespace MasterProject.Repositories
         {
             conn.Open();
             string sql = "INSERT INTO t_employeemaster (c_uid, c_empname, c_empgender, c_empdob, c_empshift, c_empdept, c_empimage) VALUES (@uid, @name, @gender, @dob, @shift, @dept, @image)";
-
+                
             using (var command = new NpgsqlCommand(sql, conn))
             {
                 command.Parameters.AddWithValue("@uid", employee.c_uid);
@@ -81,13 +85,14 @@ namespace MasterProject.Repositories
                 command.Parameters.AddWithValue("@image", employee.c_empimage);
 
                 command.ExecuteNonQuery();
+                conn.Close();
             }
         }
 
         public void UpdateEmployee(EmployeeModel employee)
         {
             string sql = "UPDATE t_employeemaster SET c_uid = @uid, c_empname = @name, c_empgender = @gender, c_empdob = @dob, c_empshift = @shift, c_empdept = @dept, c_empimage = @image WHERE c_empid = @id";
-
+ conn.Open();
             using (var command = new NpgsqlCommand(sql, conn))
             {
                 command.Parameters.AddWithValue("@uid", employee.c_uid);
@@ -100,17 +105,19 @@ namespace MasterProject.Repositories
                 command.Parameters.AddWithValue("@id", employee.c_empid);
 
                 command.ExecuteNonQuery();
+                 conn.Close();
             }
         }
 
         public void DeleteEmployee(int id)
         {
             string sql = "DELETE FROM t_employeemaster WHERE c_empid = @id";
-
+           conn.Open();
             using (var command = new NpgsqlCommand(sql, conn))
             {
                 command.Parameters.AddWithValue("@id", id);
                 command.ExecuteNonQuery();
+                 conn.Close();
             }
         }
     }
