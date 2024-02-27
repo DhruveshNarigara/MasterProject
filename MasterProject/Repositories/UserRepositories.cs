@@ -48,9 +48,9 @@ namespace MasterProject.Repositories
                 cmd.Parameters.AddWithValue("@email",login.c_email);
                 cmd.Parameters.AddWithValue("@password",login.c_password);
                 var reader = cmd.ExecuteReader();
-                // if (reader.Read())
-                // {
-                //     isAuthenticated=true;
+                if (reader.Read())
+                {
+                    isAuthenticated=true;
                 //     var session = _httpContextAccessor.HttpContext?.Session;
                 //     if (session != null)
                 //     {
@@ -63,11 +63,11 @@ namespace MasterProject.Repositories
                 //     conn.Close();
                     
                 //     return isAuthenticated;
-                // }
+                }
             
             }
             conn.Close();
-            return false;
+            return isAuthenticated;
           
         }
     }

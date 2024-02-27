@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\interns053\MasterProject\MasterProject\MasterProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Admin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Admin/EditEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/interns053/MasterProject/MasterProject/MasterProject/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/interns053/MasterProject/MasterProject/MasterProject/Views/DepartmentAjax/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudEFqYXhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
