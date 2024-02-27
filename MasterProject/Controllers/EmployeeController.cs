@@ -5,10 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MasterProject.Models;
+using MasterProject.Repositories;
 
 namespace MasterProject.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class EmployeeController : Controller
     {
         private readonly ILogger<EmployeeController> _logger;

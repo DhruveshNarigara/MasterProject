@@ -2,10 +2,10 @@
 
 <button class="btn btn-outline-primary" style="float: left; margin-top: 10px;"
     onclick="location.href='@Url.Action("AddDept", "Department")'">Add Department</button>
-    <br>
+<br>
 <h2 class="text-center">All Departments</h2>
 
-<table class="table table-responsive table-striped">
+<table class="table table-responsive table-striped table-hover">
     <thead>
         <tr>
             <th>Department ID</th>
@@ -25,7 +25,9 @@
 
                     <form method="post" action="@Url.Action("DeleteDept", "Department")" style="display:inline;">
                         @Html.Hidden("deptId", city.c_deptid)
-                        <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this department?');" type="submit">Delete</button>
+                        <button class="btn btn-danger"
+                            onclick="return confirm('Are you sure you want to delete this department?');"
+                            type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
