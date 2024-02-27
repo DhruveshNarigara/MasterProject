@@ -3,6 +3,8 @@ using MasterProject.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IUserRepositories, UserRepositories>();
+builder.Services.AddScoped<IEmployeeRepositories , EmployeeRepositories>();
+
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
