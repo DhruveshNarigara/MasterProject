@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TVe9JO5lZKXvAyby6cq6qiwF/cAbog74xFRFDGUjarugZhD+kqX0xLuxVu0CrBvTtmfQMOE7SLMgKiczV1NylA==",
+  "dgSpecHash": "W8fXEYfQKrzHGRkOt/xdJZgDq0CTsutAE+jtWnpnRg7Q3iIl2oYQjMbUYyeIXBsLYYeSzuEFF0m0gTek97oHpg==",
   "success": true,
   "projectFilePath": "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Devarsh Patel\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Devarsh Patel\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Devarsh Patel\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
+    "C:\\Users\\Devarsh Patel\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512",
     "C:\\Users\\Devarsh Patel\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "C:\\Users\\Devarsh Patel\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Devarsh Patel\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
