@@ -1,0 +1,66 @@
+@model EmployeeModel
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+<h1>Edit</h1>
+
+<h4>Employee</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-controller="Admin" enctype="multipart/form-data">
+            <input type="hidden" asp-for="c_empid" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="c_empname" class="control-label"></label>
+                <input asp-for="c_empname" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Gender</label>
+                <div>
+                    <label><input asp-for="c_empgender" value="M" type="radio" /> Male</label>
+                    <label><input asp-for="c_empgender" value="F" type="radio" /> Female</label>
+                </div>
+                <span asp-validation-for="c_empgender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="c_empdob" class="control-label"></label>
+                <input asp-for="c_empdob" class="form-control" />
+
+            </div>
+
+            <div>
+            <p>Shift</p>
+            <input type="checkbox" name="c_empshift" value="Day"
+                checked='@Model.c_empshift.Contains("Day")'>Day
+            <input type="checkbox" name="c_empshift" value="Night"
+                checked='@Model.c_empshift.Contains("Night")'>Night
+        </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="c_empdept" class="control-label"></label>
+                <select asp-for="c_empdept" class="form-control" asp-items="ViewBag.Departments"></select>
+
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllStudents">Back to List</a>
+</div>

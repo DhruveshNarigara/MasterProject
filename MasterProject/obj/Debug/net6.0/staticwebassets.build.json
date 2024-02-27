@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/SvcSPNUZo93XHIueqCMQ0R36odkRUzW07+n6v4N3/4=",
+  "Hash": "/FrAu6iSS0tP+LG3p4Wqm/6uPoTCSGOULc2O1CPIJbE=",
   "Source": "MasterProject",
   "BasePath": "_content/MasterProject",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/wwwroot/images/c9f1c3c2-98b5-43cd-8064-b0363bfcc806_IMG_1569_2.jpg",
+      "SourceId": "MasterProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/wwwroot/",
+      "BasePath": "_content/MasterProject",
+      "RelativePath": "images/c9f1c3c2-98b5-43cd-8064-b0363bfcc806_IMG_1569_2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/c9f1c3c2-98b5-43cd-8064-b0363bfcc806_IMG_1569_2.jpg"
     },
     {
       "Identity": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/wwwroot/js/site.js",

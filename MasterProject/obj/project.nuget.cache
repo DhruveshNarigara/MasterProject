@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QaK3eF1xqRzxNaqEg3Unr8S4F/5nVQPzJF1+VvG2N2KmLOHDO2XKpwrF4FjY5OqP3JYV/GwOTq7CPyeUe8lLaQ==",
+  "dgSpecHash": "a4ePSr7zRzV74c02VQ7zyHEpMLRR12mH/V1DVNDLzYaWk7G8MF7tE8K/9G1Qve+2uU13WEeXQbWFHeZ+54XYog==",
   "success": true,
   "projectFilePath": "/Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/MasterProject.csproj",
   "expectedPackageFiles": [
     "/Users/dhruveshnarigara/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/dhruveshnarigara/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "/Users/dhruveshnarigara/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512",
+    "/Users/dhruveshnarigara/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512",
     "/Users/dhruveshnarigara/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/dhruveshnarigara/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/dhruveshnarigara/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",

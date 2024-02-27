@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "MasterProject/1.0.0": {
         "dependencies": {
-          "Npgsql": "8.0.2"
+          "Npgsql": "8.0.0"
         },
         "runtime": {
           "MasterProject.dll": {}
@@ -33,7 +33,7 @@
           }
         }
       },
-      "Npgsql/8.0.2": {
+      "Npgsql/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
           "System.Diagnostics.DiagnosticSource": "8.0.0",
@@ -42,8 +42,8 @@
         },
         "runtime": {
           "lib/net6.0/Npgsql.dll": {
-            "assemblyVersion": "8.0.2.0",
-            "fileVersion": "8.0.2.0"
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
           }
         }
       },
@@ -112,12 +112,12 @@
       "path": "microsoft.extensions.logging.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
     },
-    "Npgsql/8.0.2": {
+    "Npgsql/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MuJzLoWCaQhQAR3oh66YR0Ir6mxuezncGX3f8wxvAc21g0+9HICktJQlqMoODhxztZKXE5k9GxRxqUAN+vPb4g==",
-      "path": "npgsql/8.0.2",
-      "hashPath": "npgsql.8.0.2.nupkg.sha512"
+      "sha512": "sha512-Qiz74U+O7Mv4knrsXgKVYGJjgwoziK+aMFZqz7PtKR3vyGIhZA0tnW6HoUnL3X+YqtmVuhmoKkN8LDWEHMxPbw==",
+      "path": "npgsql/8.0.0",
+      "hashPath": "npgsql.8.0.0.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/8.0.0": {
       "type": "package",

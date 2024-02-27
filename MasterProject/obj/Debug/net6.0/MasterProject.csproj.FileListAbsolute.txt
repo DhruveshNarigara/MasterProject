@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/bin/Debug/net6.0/appsettings.Development.json
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/bin/Debug/net6.0/appsettings.json
 /Users/dhruveshnarigara/Documents/CASE POINT INTERNSHIP/DOTNET CORE MVC CLAERNT/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.staticwebassets.runtime.json
@@ -66,3 +67,39 @@ D:/C#/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/refint/MasterPr
 D:/C#/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.pdb
 D:/C#/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.genruntimeconfig.cache
 D:/C#/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/ref/MasterProject.dll
+=======
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/appsettings.Development.json
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/appsettings.json
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.staticwebassets.runtime.json
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.exe
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.deps.json
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.runtimeconfig.json
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/MasterProject.pdb
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/Npgsql.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/System.Text.Json.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.csproj.AssemblyReference.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.GeneratedMSBuildEditorConfig.editorconfig
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.AssemblyInfoInputs.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.AssemblyInfo.cs
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.csproj.CoreCompileInputs.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.MvcApplicationPartsAssemblyInfo.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.RazorAssemblyInfo.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.RazorAssemblyInfo.cs
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/staticwebassets.build.json
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/staticwebassets.development.json
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/scopedcss/bundle/MasterProject.styles.css
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/scopedcss/projectbundle/MasterProject.bundle.scp.css
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.csproj.CopyComplete
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/refint/MasterProject.dll
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.pdb
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/MasterProject.genruntimeconfig.cache
+C:/interns053/MasterProject/MasterProject/MasterProject/obj/Debug/net6.0/ref/MasterProject.dll
+>>>>>>> origin/Devarsh
