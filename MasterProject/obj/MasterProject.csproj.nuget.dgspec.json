@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {}
+    "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {}
   },
   "projects": {
-    "c:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {
+    "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
+        "projectUniqueName": "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
         "projectName": "MasterProject",
-        "projectPath": "c:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
+        "projectPath": "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\MasterProject.csproj",
         "packagesPath": "C:\\Users\\Devarsh Patel\\.nuget\\packages\\",
-        "outputPath": "c:\\interns053\\MasterProject\\MasterProject\\MasterProject\\obj\\",
+        "outputPath": "C:\\interns053\\MasterProject\\MasterProject\\MasterProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Devarsh Patel\\AppData\\Roaming\\NuGet\\NuGet.Config",

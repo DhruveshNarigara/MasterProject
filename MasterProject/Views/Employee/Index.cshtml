@@ -35,8 +35,12 @@
 
                     <td>
                         <a asp-action="Edit" asp-route-id="@employee.c_empid" class="btn btn-warning">Edit</a> |
-                        <a asp-action="Delete" asp-route-id="@employee.c_empid" class="btn btn-danger">Delete</a> 
-                        @* <a asp-action="Details" asp-route-id="@employee.c_empid" class="btn btn-info">Details</a> *@
+                        
+                        <a asp-action="Details" asp-route-id="@employee.c_empid" class="btn btn-info">Details</a> |
+                        <form method="post" action="@Url.Action("Delete", "Employee")" style="display:inline;">
+                            @Html.Hidden("id", employee.c_empid)
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
                     </td>
                 </tr>
             }

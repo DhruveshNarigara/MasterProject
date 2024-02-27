@@ -1,7 +1,7 @@
 @model MasterProject.Models.EmployeeModel
 @* @{
-    ViewData["Title"] = "Edit";
-    var languages = new List<string> { "Gujarati", "Marathi", "English" };
+ViewData["Title"] = "Edit";
+var languages = new List<string> { "Gujarati", "Marathi", "English" };
 } *@
 <h1>Edit</h1>
 
@@ -36,20 +36,21 @@
                 <span asp-validation-for="c_empdob" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="c_empshift" class="control-label"></label>
+                <label class="control-label">Shift</label>
                 <div class="form-check">
-                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" value="Day" id="dayShift" />
+                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" id="dayShift" />
                     <label class="form-check-label" for="dayShift">Day Shift</label>
                 </div>
                 <div class="form-check">
-                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" value="Night"
-                        id="nightShift" />
+                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" id="nightShift" />
                     <label class="form-check-label" for="nightShift">Night Shift</label>
                 </div>
             </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
         </form>
     </div>
 </div>
