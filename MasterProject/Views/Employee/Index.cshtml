@@ -28,17 +28,17 @@
                     <td>@employee.c_empshift</td>
                     
                     <td>@employee.c_empdept</td>
-                   <td>
-                                <img src="~/images/@employee.c_empimagePath" class="rounded-square" height="100" width="100" />
+                   @* <td>
+                                <img src="@employee.c_empimagePath" class="rounded-squre" height="100" width="100" />
                                     
 
-                            </td>
+                            </td> *@
 
-                    @* <td>
+                    <td>
                         <a asp-action="Edit" asp-route-id="@employee.c_empid" class="btn btn-warning">Edit</a> |
                         <a asp-action="Delete" asp-route-id="@employee.c_empid" class="btn btn-danger">Delete</a> 
-                        @* <a asp-action="Details" asp-route-id="@employee.c_empid" class="btn btn-info">Details</a> 
-                    </td> *@
+                         <a asp-action="Details" asp-route-id="@employee.c_empid" class="btn btn-info">Details</a> 
+                    </td>
 
                     <td>
                         <a asp-action="EditEmployee" asp-route-id="@employee.c_empid" class="btn btn-warning">Edit</a> |

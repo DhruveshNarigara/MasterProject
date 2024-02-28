@@ -114,7 +114,7 @@ namespace MasterProject.Controllers
         {
             // Add your session check logic here if needed
             _employeerepo.DeleteEmployee(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index","Admin");
         }
         [HttpGet]
         public IActionResult Details(int id)

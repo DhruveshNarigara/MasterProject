@@ -91,28 +91,28 @@ namespace MasterProject.Repositories
         }
 
 
-       public void UpdateEmployee(EmployeeModel employee)
-{
-    string sql = "UPDATE t_employeemaster SET  c_empname = @name, c_empgender = @gender, c_empdob = @dob, c_empshift = @shift, c_empdept = @dept WHERE c_empid = @id";
-    conn.Open();
-    using (var command = new NpgsqlCommand(sql, conn))
-    {
-        command.Parameters.AddWithValue("@name", employee.c_empname);
-        command.Parameters.AddWithValue("@gender", employee.c_empgender);
-        command.Parameters.AddWithValue("@dob", employee.c_empdob);
-        command.Parameters.AddWithValue("@shift", employee.c_empshift);
-        command.Parameters.AddWithValue("@dept", employee.c_empdept);
-       // command.Parameters.AddWithValue("@image", employee.c_empimagePath); // Assuming c_empimagePath holds the image path
-        command.Parameters.AddWithValue("@id", employee.c_empid);
+        public void UpdateEmployee(EmployeeModel employee)
+        {
+            string sql = "UPDATE t_employeemaster SET  c_empname = @name, c_empgender = @gender, c_empdob = @dob, c_empshift = @shift, c_empdept = @dept WHERE c_empid = @id";
+            conn.Open();
+            using (var command = new NpgsqlCommand(sql, conn))
+            {
+                command.Parameters.AddWithValue("@name", employee.c_empname);
+                command.Parameters.AddWithValue("@gender", employee.c_empgender);
+                command.Parameters.AddWithValue("@dob", employee.c_empdob);
+                command.Parameters.AddWithValue("@shift", employee.c_empshift);
+                command.Parameters.AddWithValue("@dept", employee.c_empdept);
+                // command.Parameters.AddWithValue("@image", employee.c_empimagePath); // Assuming c_empimagePath holds the image path
+                command.Parameters.AddWithValue("@id", employee.c_empid);
 
-        // Make sure to set the value of the @image parameter
-        // For example, assuming c_empimagePath is a property that holds the image path:
-        //command.Parameters["@image"].Value = employee.c_empimagePath;
+                // Make sure to set the value of the @image parameter
+                // For example, assuming c_empimagePath is a property that holds the image path:
+                //command.Parameters["@image"].Value = employee.c_empimagePath;
 
-        command.ExecuteNonQuery();
-        conn.Close();
-    }
-}
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
 
 
         public void DeleteEmployee(int id)

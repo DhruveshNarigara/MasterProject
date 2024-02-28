@@ -1,0 +1,364 @@
+@* @model IEnumerable<MasterProject.Models.EmployeeModel>
+@{
+ViewBag.Title = "Index";
+}
+<div>
+<h2>Employee</h2>
+<table id="emptable" class="table table-striped">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Gender</th>
+<th>Date of Birth</th>
+<th>Shift</th>
+<th>Department</th>
+<th>Image</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div>
+<div>
+<h2>Add Employee</h2>
+<form id="addemp" enctype="multipart/form-data">
+<div class="form-group">
+<label for="Name">Name:</label>
+<input type="text" class="form-control" name="Name">
+</div>
+<div class="form-group">
+<label>Gender:</label><br>
+<label><input type="radio" name="Gender" value="Male"> Male</label>
+<label><input type="radio" name="Gender" value="Female"> Female</label>
+<label><input type="radio" name="Gender" value="Other"> Other</label>
+</div>
+<select class="form-control" id="c_deptname">
+<option>Select Category</option>
+@foreach (var department in ViewBag.DepartmentModel)
+{
+<option value="@department.Value">@department.Text</option>
+}
+</select>
+<div class="form-group">
+<label for="Dob">Date of Birth:</label>
+<input type="date" class="form-control" name="c_empdob" id="Dob">
+</div>
+<div class="form-group">
+<label for="Shift">Shift:</label><br>
+<input type="checkbox" name="c_empshift" id="Shift" value="day"> Day<br>
+@* <input type="checkbox" name="c_empshift" id="Shift" value="Afternoon"> Afternoon<br> *@
+@* <input type="checkbox" name="c_empshift" id="Shift" value="Night"> Night<br>
+</div>
+
+
+<div class="form-group">
+<label for="Image">Image:</label>
+<input type="file" class="form-control-file" name="Image">
+</div>
+<button type="submit" class="btn btn-primary">Add</button>
+<input type="button" onclick="resetForm()" value="Reset Form" class="btn btn-danger" />
+</form>
+</div>
+</div>
+
+@section scripts {
+<script>
+$(document).ready(function () {
+function loadEmployees() {
+$.ajax({
+url: 'https://localhost:7268/api/EmpApi/GetAllEmployees',
+type: 'GET',
+dataType: 'json',
+success: function (employees) {
+var tbody = $('#emptable tbody');
+tbody.empty(); // Clear existing rows
+
+if (employees && employees.length > 0) {
+employees.forEach(function (employee) {
+var row = `<tr>
+<td>${employee.c_empid}</td>
+<td>${employee.c_empname}</td>
+<td>${employee.c_empgender}</td>
+<td>${employee.c_empdob}</td>
+<td>${employee.c_empshift}</td>
+<td>${employee.c_empdept}</td>
+<td><img src="wwwroot/images/${employee.c_empimageFile}" alt="Employee Photo" style="max-width: 100px;"></td>
+<td>
+<button class="btn btn-primary edit" data-id="${employee.c_empid}">Edit</button>
+<button class="btn btn-danger delete" data-id="${employee.c_empid}">Delete</button>
+</td>
+</tr>`;
+tbody.append(row);
+});
+} else {
+tbody.append('<tr><td colspan="8">No data available</td></tr>');
+}
+},
+error: function (xhr, status, error) {
+console.error('Error loading employees:', error);
+var tbody = $('#emptable tbody');
+tbody.empty();
+tbody.append('<tr><td colspan="8">Error loading employees</td></tr>');
+}
+});
+}
+
+loadEmployees(); // Load employees when the page loads
+
+function resetForm() {
+$('#addemp')[0].reset();
+}
+
+$('#addemp').on('submit', function(e) {
+e.preventDefault();
+var employee = new FormData(this);
+console.log(employee);
+$.ajax({
+url: 'https://localhost:7268/api/EmpApi/AddEmployee',
+type: 'POST',
+processData: false,
+contentType: false,
+data: employee,
+success: function(data) {
+console.log(data);
+alert(data.message);
+}
+});
+});
+});
+</script>
+}
+
+
+
+</script> *@
+
+@* @model IEnumerable<MasterProject.Models.EmployeeModel> *@
+@model MasterProject.Models.EmployeeModel
+@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <h2>Employee</h2>
+    <table id="emptable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Shift</th>
+                <th>Department</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="create" asp-controller="EmpAjax" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="c_empname" class="control-label"></label>
+                <input asp-for="c_empname" class="form-control" />
+                <span asp-validation-for="c_empname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c_empgender" class="control-label"></label>
+                <div class="form-check">
+                    <input asp-for="c_empgender" class="form-check-input" type="radio" value="M" id="male" />
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="c_empgender" class="form-check-input" type="radio" value="F" id="female" />
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <span asp-validation-for="c_empgender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c_empdob" class="control-label"></label>
+                <input asp-for="c_empdob" class="form-control" />
+                <span asp-validation-for="c_empdob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c_empshift" class="control-label"></label>
+                <div class="form-check">
+                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" value="Day" id="dayShift" />
+                    <label class="form-check-label" for="dayShift">Day Shift</label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="c_empshift" class="form-check-input" type="checkbox" value="Night"
+                        id="nightShift" />
+                    <label class="form-check-label" for="nightShift">Night Shift</label>
+                </div>
+                <div class="form-group">
+                    <label for="CATEGORYkDropdown"><b>category<b></label>
+                    <div class="form-group">
+                    <label for="CATEGORYkDropdown"><b>category<b></label>
+                    <select class="form-control" id="c_deptname">
+                            <option>Select Category</option>
+                            @if (ViewBag.Departments != null)
+                            {
+                                foreach (var department in ViewBag.Departments)
+                                {
+                                    <option value="@department.Value">@department.Text</option>
+                                }
+    }
+</select>
+
+                </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label asp-for="c_empimageFile" class="control-label"></label>
+                <input asp-for="c_empimageFile" type="file" class="form-control" />
+                <span asp-validation-for="c_empimagePath" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            function loadEmployees() {
+                $.ajax({
+                    url: 'https://localhost:7098/EmpAjax/GetAllEmployees',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (employees) {
+                        var tbody = $('#emptable tbody');
+                        tbody.empty(); // Clear existing rows
+
+                        if (employees && employees.length > 0) {
+                            employees.forEach(function (employee) {
+                                var row = '';
+                                if (employee != null) {
+                                    row = `<tr>
+                                                <td>${employee.c_empid}</td>
+                                                <td>${employee.c_empname}</td>
+                                                <td>${employee.c_empgender}</td>
+                                                <td>${employee.c_empdob}</td>
+                                                <td>${employee.c_empshift}</td>
+                                                <td>${employee.c_empdept}</td>
+                                                <td><img src="wwwroot/images/${employee.c_empimageFile}" alt="Employee Photo" style="max-width: 100px;"></td>
+                                                <td>
+                                                    <button class="btn btn-primary edit" data-id="${employee.c_empid}">Edit</button>
+                                                    <button class="btn btn-danger delete" data-id="${employee.c_empid}">Delete</button>
+                                                </td>
+                                            </tr>`;
+                                } else {
+                                    row = '<tr><td colspan="8">Employee data not available</td></tr>';
+                                }
+                                tbody.append(row);
+                            });
+                        } else {
+                            tbody.append('<tr><td colspan="8">No data available</td></tr>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error loading employees:', error);
+                        var tbody = $('#emptable tbody');
+                        tbody.empty();
+                        tbody.append('<tr><td colspan="8">Error loading employees</td></tr>');
+                    }
+                });
+            }
+
+            $.ajax({
+        url: 'https://localhost:7098/EmpAjax/getalldept',
+        type: 'GET',
+        dataType: 'json',
+        success: function (departments) {
+            var dropdown = $('#c_deptname');
+            dropdown.empty(); // Clear existing options
+
+            if (departments && departments.length > 0) {
+                departments.forEach(function (department) {
+                    var option = `<option value="${department.c_deptid}">${department.c_deptname}</option>`;
+                    dropdown.append(option);
+                });
+            } else {
+                dropdown.append('<option>No data available</option>');
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Error loading departments:', error);
+            var dropdown = $('#c_deptname');
+            dropdown.empty();
+            dropdown.append('<option>Error loading departments</option>');
+        }
+    });
+            loadEmployees(); // Load employees when the page loads
+            loadEmployees(); // Load employees when the page loads
+
+            $(document).ready(function () {
+                $('#addEmployeeForm').on('submit', function (e) {
+                    e.preventDefault();
+                    var formData = new FormData(this);
+                    $.ajax({
+                        url: 'https://localhost:7098/EmpAjax/GetAllEmployees',
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (data) {
+                            console.log(data);
+                            alert(data.message);
+                            // Optionally, you can redirect to another page upon successful addition
+                            // window.location.href = '/Employee/Index';
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Error adding employee:', error);
+                            alert('Error adding employee. Please try again.');
+                        }
+                    });
+                });
+            });
+
+            function deleteEmployee(employeeId) {
+        $.ajax({
+            url: '/EmpAjax/Delete/' + c_empid,
+            type: 'DELETE',
+            success: function (data) {
+                alert(data.message);
+                // Reload employees after successful deletion
+                loadEmployees();
+            },
+            error: function (xhr, status, error) {
+                console.error('Error deleting employee:', error);
+                alert('Error deleting employee. Please try again.');
+            }
+        });
+    }
+
+    // Load employees when the page loads
+    loadEmployees();
+
+            function resetForm() {
+                $('#addEmployeeForm')[0].reset();
+            }
+        });
+    </script>
+}

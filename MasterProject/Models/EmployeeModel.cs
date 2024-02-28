@@ -22,6 +22,7 @@ namespace MasterProject.Models
         public string c_empshift { get; set; }
 
         public int c_empdept { get; set; }
+        //public string c_deptname { get; set; }
         public string? c_empimagePath { get; set; }
         public IFormFile? c_empimageFile { get; set; }
 
